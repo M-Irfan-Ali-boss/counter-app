@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const Multiplier = () => {
-  const [counter, setCounter] = useState(-5);
+  const [counter] = useState(-5);
   const [multiplierAns, setMultiplierAns] = useState(0);
 
   return (
@@ -14,7 +14,7 @@ const Multiplier = () => {
           type='text'
           className='w-full border border-gray-300 px-5 py-3 rounded-md focus:outline-none'
           placeholder='Enter Value'
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+          onChange={(e: React.ChangeEvent<HTMLInputElement>): void =>
             setMultiplierAns(counter * +e.target.value)
           }
         />

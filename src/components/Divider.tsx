@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const Divider = () => {
-  const [counter, setCounter] = useState(6);
+  const [counter] = useState(6);
   const [dividerAns, setDividerAns] = useState(0);
 
   return (
@@ -14,7 +14,7 @@ const Divider = () => {
           type='text'
           className='w-full border border-gray-300 px-5 py-3 rounded-md focus:outline-none'
           placeholder='Enter Value'
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+          onChange={(e: React.ChangeEvent<HTMLInputElement>): void =>
             +e.target.value
               ? setDividerAns(counter / +e.target.value)
               : setDividerAns(0)

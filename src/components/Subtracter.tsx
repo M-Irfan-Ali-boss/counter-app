@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 const Subtracter = () => {
-  const [counter, setCounter] = useState(4);
+  const [counter] = useState(4);
   const [subtracterAns, setSubtracterAns] = useState(0);
 
   return (
@@ -14,7 +14,7 @@ const Subtracter = () => {
           type='text'
           className='w-full border border-gray-300 px-5 py-3 rounded-md focus:outline-none'
           placeholder='Enter Value'
-          onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+          onChange={(e: React.ChangeEvent<HTMLInputElement>): void =>
             +e.target.value !== 0
               ? setSubtracterAns(counter - +e.target.value)
               : setSubtracterAns(0)

@@ -9,13 +9,13 @@ const Counter = () => {
         <h1 className='text-3xl font-bold text-center mb-5'>Counter</h1>
         <div className='grid grid-cols-3 gap-4 align-items-center'>
           <button
-            onClick={() => setCounter(counter + 1)}
+            onClick={(): void => setCounter(counter + 1)}
             className='bg-blue-500 text-white py-3 rounded-md text-center w-full'>
             +
           </button>
           <h1 className='text-3xl font-bold text-center mb-5'>{counter}</h1>
           <button
-            onClick={() => setCounter(counter - 1)}
+            onClick={(): void => setCounter(counter - 1)}
             className='bg-red-500 text-white rounded-md py-3 text-center w-full'>
             -
           </button>
