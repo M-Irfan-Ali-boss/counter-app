@@ -1,7 +1,7 @@
 import useCounter from '../hooks/useCounter';
 
 const Counter = () => {
-  const [counter,handleIncrement,handleDecrement]= useCounter();
+  const [counter, handleIncrement, handleDecrement] = useCounter();
 
   return (
     <div className='overflow-hidden bg-white shadow sm:rounded-lg'>
